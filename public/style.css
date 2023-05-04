@@ -14,3 +14,77 @@ h1, h2, h3, h4, p {
 --Dark-Grayish-Blue: hsl(217, 19%, 24%);
 --Dark-Blue: hsl(218, 23%, 16%);
 }
+
+#app {
+    background-color: var(--Dark-Blue);
+    display: grid;
+    place-items: center;
+    overflow-y: scroll;
+}
+@font-face {
+    font-family: regular;
+    src: url(./fonts/Manrope-Regular.ttf);
+}
+
+.pauseImage {
+    max-width: 100%;
+}
+
+.mainBox {
+    color: white;
+    font-family: regular;
+    background-color: var(--Dark-Grayish-Blue);
+    width: clamp(5rem + 5vw, 10rem + 37vw, 50rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    padding: 20px 20px 0 20px;
+    position: relative;
+}
+.adviceTitle {
+    font-size: .9rem;
+    color: var(--Neon-Green);
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+.quote {
+    font-size: 3rem;
+    width: 80%;
+    text-align: center;
+}
+
+.bottomSection {
+    margin-top: 20px;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    margin-top: 40px;
+    margin-bottom: 80px;
+
+}
+.circle {
+    position: absolute;
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    
+    background-color: var(--Neon-Green);
+    display: grid;
+    place-items: center;
+}
+
+@media only screen and (max-width: 430px) {
+    .quote {
+        font-size: 20px;
+    }
+    .circle {
+        width: 4rem;
+        height: 4rem;
+    }
+}
