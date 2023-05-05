@@ -32,7 +32,6 @@ h1, h2, h3, h4, p {
 
 .mainBox {
     color: white;
-    font-family: regular;
     background-color: var(--Dark-Grayish-Blue);
     width: clamp(5rem + 5vw, 10rem + 37vw, 50rem);
     display: flex;
@@ -41,7 +40,9 @@ h1, h2, h3, h4, p {
     border-radius: 20px;
     padding: 20px 20px 0 20px;
     position: relative;
+    font-family: regular;
 }
+
 .adviceTitle {
     font-size: .9rem;
     color: var(--Neon-Green);
@@ -49,9 +50,11 @@ h1, h2, h3, h4, p {
     margin-bottom: 40px;
     margin-top: 20px;
 }
+
 .quote {
-    font-size: 3rem;
-    width: 80%;
+    min-height: 5vh;
+    font-size: 26px;
+    width: 90%;
     text-align: center;
 }
 
@@ -62,8 +65,8 @@ h1, h2, h3, h4, p {
     place-items: center;
     margin-top: 40px;
     margin-bottom: 80px;
-
 }
+
 .circle {
     position: absolute;
     width: 6rem;
@@ -72,15 +75,21 @@ h1, h2, h3, h4, p {
     top: 100%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
-    
     background-color: var(--Neon-Green);
     display: grid;
     place-items: center;
+    transition: .2s
+}
+
+.circle:hover{
+    box-shadow: 0 0 15px 0 var(--Neon-Green);
+    cursor: pointer;
+    transition: .2s;
 }
 
 @media only screen and (max-width: 430px) {
     .quote {
+        min-height: 4vh;
         font-size: 20px;
     }
     .circle {
